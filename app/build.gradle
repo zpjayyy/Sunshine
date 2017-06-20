@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.jay.sunshine"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testCompile 'junit:junit:4.12'
+
+    def dependencies = rootProject.ext.dependencies
+
+    compile dependencies.supportAppCompat
+    compile dependencies.supportDesign
+    compile dependencies.supportAnnotations
+    compile dependencies.constraintLayout
+
+    compile dependencies.okhttp
+    compile (dependencies.retrofit, {
+        exclude group: 'com.squareup.okhttp3'
+    })
+    compile dependencies.okhttpLogging
+
+    compile dependencies.retrofit
+    compile dependencies.retrofitGson
+    compile dependencies.retrofitRxjava2
+
+    compile dependencies.gson
+
+    compile dependencies.glideCompile
+    annotationProcessor dependencies.glideAnnotationProcessor
+    compile dependencies.glideOkhttp3
+
+//    compile dependencies.rxJava
+    compile dependencies.rxKotlin
+    compile dependencies.rxAndroid
+
+    compile dependencies.ankoCommons
+    compile dependencies.ankoSqlite
+
+    compile dependencies.stetho
+
+}

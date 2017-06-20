@@ -1,0 +1,55 @@
+ext {
+
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.3'
+
+    minSdkVersion = 19
+    targetSdkVersion = 25
+
+    supportLibVersion = '25.3.1'
+    constraintLayoutVersion = '1.0.2'
+
+    okhttpVersion = '3.8.0'
+    retrofitVersion = '2.3.0'
+    gsonVersion = '2.8.0'
+
+    glideVersion = '4.0.0-RC0'
+    glideOkhttpIntegrationVersion = '1.5.0@aar'
+
+    rxJava2Version = '2.0.3'
+    rxkotlinVersion = '2.0.3'
+    rxAndroidVersion = '2.0.1'
+
+    ankoVersion = '0.10.0'
+
+    stethoVersion = '1.5.0'
+
+    dependencies = [
+            supportAppCompat        : "com.android.support:appcompat-v7:$supportLibVersion",
+            supportDesign           : "com.android.support:design:$supportLibVersion",
+            supportAnnotations      : "com.android.support:support-annotations:$supportLibVersion",
+
+            constraintLayout        : "com.android.support.constraint:constraint-layout:$constraintLayoutVersion",
+
+            okhttp                  : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            okhttpLogging           : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+            retrofit                : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            gson                    : "com.google.code.gson:gson:$gsonVersion",
+            retrofitGson            : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitRxjava2         : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+
+            glideCompile            : "com.github.bumptech.glide:glide:$glideVersion",
+            glideAnnotationProcessor: "com.github.bumptech.glide:compiler:$glideVersion",
+            glideOkhttp3            : "com.github.bumptech.glide:okhttp3-integration:$glideOkhttpIntegrationVersion",
+
+            rxJava                  : "io.reactivex.rxjava2:rxjava:$rxJava2Version",
+            rxKotlin                : "io.reactivex.rxjava2:rxkotlin:$rxkotlinVersion",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+
+            ankoCommons             : "org.jetbrains.anko:anko-commons:$ankoVersion",
+            ankoSqlite              : "org.jetbrains.anko:anko-sqlite:$ankoVersion",
+
+            stetho                  : "com.facebook.stetho:stetho:$stethoVersion",
+    ]
+
+}

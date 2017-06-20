@@ -1,0 +1,14 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Sunshine</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="please_wait_moment">请稍后...</string>
+
+
+    <!-- Temperature format -->
+    <string name="format_temperature">
+        <xliff:g id="temp">%1.0f</xliff:g>\u00B0
+    </string>
+    <string name="input_city_code">请输入城市邮编</string>
+
+</resources>
